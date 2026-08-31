@@ -35,17 +35,20 @@ Why were these data types selected?
 
 ### Answer
 
-_Write your explanation here._
+_country.Population is a data type integer because population value is a whole number as population cannot be based on decimals.
+LifeExpectancy is data type decimal because whenever we calculate expectancy we can get a decimal number.
 
 ### Screenshot
 
-_Show the table structure or DESCRIBE output._
+<img width="1440" height="900" alt="Question 1" src="https://github.com/user-attachments/assets/7ce24dca-3544-4051-88be-9474fbcbf215" />
+
 
 ```sql
 DESCRIBE country;
 ```
 
-![Q1 Screenshot](screenshots/q1_datatypes.png)
+<img width="1440" height="900" alt="Question 1" src="https://github.com/user-attachments/assets/a7e0dce1-f24c-4fce-8b36-b9f61fe8a57f" />
+
 
 ---
 
@@ -64,7 +67,8 @@ _Write your explanation here._
 DESCRIBE country;
 ```
 
-![Q2 Screenshot](screenshots/q2_indepyear.png)
+<img width="1440" height="900" alt="Question 1" src="https://github.com/user-attachments/assets/2ac9bd83-0b51-4c94-9de6-3c0238a55572" />
+
 
 ---
 
@@ -75,7 +79,7 @@ Explain why your proposed data type might be better in some situations.
 
 ### Answer
 
-_Write your explanation here._
+_The data type for 'country.IndepYear' is smallest. It is because this type of data is a small whole number value.
 
 ---
 
@@ -93,7 +97,9 @@ ORDER BY Name;
 
 ### Screenshot
 
-![Q4 Screenshot](screenshots/q4_cities_sorted.png)
+<img width="1440" height="900" alt="Question 4" src="https://github.com/user-attachments/assets/d12b0f74-e543-403e-8cc2-be200e6ef863" />
+
+
 
 ---
 
@@ -113,7 +119,8 @@ ORDER BY GovernmentForm;
 
 ### Screenshot
 
-![Q5 Screenshot](screenshots/q5_government_forms.png)
+<img width="1440" height="900" alt="Question 5" src="https://github.com/user-attachments/assets/614569c2-2ac4-464c-855c-fcae65fb49de" />
+
 
 ---
 
@@ -131,7 +138,8 @@ WHERE Continent = 'Oceania';
 
 ### Screenshot
 
-![Q6 Screenshot](screenshots/q6_oceania.png)
+<img width="1440" height="900" alt="Question 6" src="https://github.com/user-attachments/assets/a47c7042-c9ec-490e-85d3-40a20b06d3f5" />
+
 
 ---
 
@@ -148,7 +156,8 @@ FROM city;
 
 ### Screenshot
 
-![Q7 Screenshot](screenshots/q7_city_countrycode.png)
+<img width="1440" height="900" alt="Question 7" src="https://github.com/user-attachments/assets/74c57890-84a7-4bf8-9975-af6a9aa3a5fc" />
+
 
 ---
 
@@ -166,7 +175,8 @@ WHERE Name = 'Nashville-Davidson';
 
 ### Screenshot
 
-![Q8 Screenshot](screenshots/q8_update_city.png)
+<img width="1440" height="900" alt="Question 8" src="https://github.com/user-attachments/assets/8cf93df9-349a-4f50-9548-29bb7c9df3db" />
+
 
 ---
 
@@ -185,7 +195,8 @@ VALUES ('NAR', 'Narnia', 'Europe', 'Fantasy', 1000000);
 
 ### Screenshot
 
-![Q9 Screenshot](screenshots/q9_insert_narnia.png)
+<img width="1440" height="900" alt="Question 9" src="https://github.com/user-attachments/assets/98226ff9-dca1-4f79-9b57-5875ef33ae15" />
+
 
 ---
 
@@ -202,4 +213,5 @@ WHERE Code = 'NAR';
 
 ### Screenshot
 
-![Q10 Screenshot](screenshots/q10_delete_narnia.png)
+<img width="1440" height="900" alt="Question 10" src="https://github.com/user-attachments/assets/4963e23d-728e-408c-acfe-a5651f6d28f6" />
+
