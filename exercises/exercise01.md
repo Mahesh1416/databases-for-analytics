@@ -57,7 +57,7 @@ DESCRIBE country;
 **What is the data type of `country.IndepYear`?**
 Why do you think this data type was selected?
 
-### The type of data was small integer. This data type was selected because this allows numerical calculations when needed.
+_The type of data was small integer. This data type was selected because this allows numerical calculations when needed.
 
 _Write your explanation here._
 
@@ -77,7 +77,7 @@ DESCRIBE country;
 **Make a case for a different data type for `country.IndepYear`.**
 Explain why your proposed data type might be better in some situations.
 
-### We can set it for a text format. This would be beneficial in the case when we do not need to perform mathematical calculations.
+_We can set it for a text format. This would be beneficial in the case when we do not need to perform mathematical calculations.
 
 _The data type for 'country.IndepYear' is smallest. It is because this type of data is a small whole number value.
 
