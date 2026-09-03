@@ -34,7 +34,8 @@ _Show evidence of how you determined this (for example, a COUNT query)._
 -- Your SQL here SELECT COUNT (*) FROM city;
 ```
 
-![Q1 Screenshot](screenshots/q1_city_count.png)
+<img width="1440" height="900" alt="Question 1" src="https://github.com/user-attachments/assets/9546fdb2-1fbf-4d9f-a6b6-22ae292195d7" />
+
 
 ---
 
@@ -55,7 +56,8 @@ JOIN countrylanguage
 
 ### Screenshot
 
-![Q2 Screenshot](screenshots/q2_country_languages.png)
+<img width="1440" height="900" alt="Question 2" src="https://github.com/user-attachments/assets/3efd6992-54c3-4c16-879a-6c783a6113e8" />
+
 
 ---
 
@@ -78,7 +80,8 @@ WHERE countrylanguage."IsOfficial" = 'T';
 
 ### Screenshot
 
-![Q3 Screenshot](screenshots/q3_official_languages.png)
+<img width="1440" height="900" alt="Question 3" src="https://github.com/user-attachments/assets/2f4aeff0-80e8-4f27-ac1f-080585b37821" />
+
 
 ---
 
@@ -121,7 +124,8 @@ Do **not** repeat any form of government more than once.
 
 ### Screenshot
 
-![Q5 Screenshot](screenshots/q5_government_forms.png)
+<img width="1440" height="900" alt="Question 5" src="https://github.com/user-attachments/assets/40c80669-cd53-4079-b279-39cdf1b2ed15" />
+
 
 ---
 
@@ -145,7 +149,8 @@ FROM country;
 
 ### Screenshot
 
-![Q6 Screenshot](screenshots/q6_union_city_country.png)
+<img width="1440" height="900" alt="Question 6" src="https://github.com/user-attachments/assets/04321a65-2879-4194-aec1-56237834b556" />
+
 
 ---
 
@@ -170,7 +175,8 @@ ORDER BY country.name;
 
 ### Screenshot
 
-![Q7 Screenshot](screenshots/q7_language_count_by_country.png)
+<img width="1440" height="900" alt="Question 7" src="https://github.com/user-attachments/assets/94ba3f61-e10b-4e5f-970e-e6a3b1401260" />
+
 
 ---
 
@@ -193,7 +199,8 @@ ORDER BY language;
 
 ### Screenshot
 
-![Q8 Screenshot](screenshots/q8_language_country_count.png)
+<img width="1440" height="900" alt="Question 8" src="https://github.com/user-attachments/assets/a0145894-1f1b-4974-a30e-be2db3e01bd4" />
+
 
 ---
 
@@ -221,7 +228,8 @@ ORDER BY country.name;
 
 ### Screenshot
 
-![Q9 Screenshot](screenshots/q9_multiple_official_languages.png)
+<img width="1440" height="900" alt="Question 9" src="https://github.com/user-attachments/assets/66eab8c7-38be-4a4d-8f3c-47dc27d01503" />
+
 
 ---
 
@@ -243,7 +251,8 @@ WHERE (district) LIKE '–';
 
 ### Screenshot
 
-![Q10 Screenshot](screenshots/q10_missing_districts.png)
+<img width="1440" height="900" alt="Question 10" src="https://github.com/user-attachments/assets/b1715648-cc52-4079-9be2-147e5c7f68e1" />
+
 
 ---
 
@@ -267,4 +276,5 @@ FROM city;
 
 ### Screenshot
 
-![Q11 Screenshot](screenshots/q11_missing_district_percentage.png)
+<img width="1440" height="900" alt="Question 11" src="https://github.com/user-attachments/assets/d6faf609-0eca-4109-89dd-8d2a27e74ac5" />
+
