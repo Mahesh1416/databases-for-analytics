@@ -1,6 +1,6 @@
 # Exercise 02: World Database – Joins, Grouping, and Data Quality
 
-- Name:
+- Name: Mahesh Bashyal
 - Course: Database for Analytics
 - Module: 2
 - Database Used: World Database (PostgreSQL)
@@ -24,7 +24,7 @@ When importing records from `worldPGSQL.sql`, **how many cities were imported**?
 
 ### Answer
 
-_Write the number of cities imported._
+_Write the number of cities imported._ 4079
 
 ### Screenshot
 
@@ -119,7 +119,8 @@ Do **not** repeat any form of government more than once.
 ### SQL
 
 ```sql
--- Your SQL here
+-- Your SQL here SELECT DISTINCT governmentform
+FROM country;
 ```
 
 ### Screenshot
