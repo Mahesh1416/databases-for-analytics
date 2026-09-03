@@ -56,7 +56,7 @@ JOIN countrylanguage
 
 ### Screenshot
 
-<img width="1440" height="900" alt="Question 2" src="https://github.com/user-attachments/assets/3efd6992-54c3-4c16-879a-6c783a6113e8" />
+![Uploading Question 2.png…]()
 
 
 ---
