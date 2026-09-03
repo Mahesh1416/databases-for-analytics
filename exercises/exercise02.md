@@ -31,7 +31,7 @@ _Write the number of cities imported._
 _Show evidence of how you determined this (for example, a COUNT query)._
 
 ```sql
--- Your SQL here
+-- Your SQL here SELECT COUNT (*) FROM city;
 ```
 
 ![Q1 Screenshot](screenshots/q1_city_count.png)
@@ -47,8 +47,11 @@ along with the **name of each language spoken in that country**.
 ### SQL
 
 ```sql
--- Your SQL here
-```
+-- Your SQL here SELECT country.name AS name_of_country,
+       countrylanguage.language
+FROM country
+JOIN countrylanguage
+  ON country.code = countrylanguage.countrycode;
 
 ### Screenshot
 
@@ -65,7 +68,12 @@ of each **official language spoken in that country**.
 ### SQL
 
 ```sql
--- Your SQL here
+-- Your SQL here SELECT country."Name" AS name_of_country,
+       countrylanguage."Language"
+FROM country
+JOIN countrylanguage
+  ON country."Code" = countrylanguage."CountryCode"
+WHERE countrylanguage."IsOfficial" = 'T';
 ```
 
 ### Screenshot
@@ -94,10 +102,9 @@ ON country.code = countrylanguage.countrycode;
 **In your own words**, describe what data the
 **second query returns that the first query does not**.
 
-### Answer
-
+### 
 _Write your explanation here._
-
+When I ran and compared the two queries, I noticed that the first query doesn't list those entries where there is no matching with a language entry while in the second query, I noticed that it includes all the countries even those that did not have a matching language entry. 
 ---
 
 ## Question 5
@@ -127,7 +134,13 @@ Label the column **"City or Country Name"**.
 ### SQL
 
 ```sql
--- Your SQL here
+-- Your SQL here SELECT name AS "City or Country Name"
+FROM city
+
+UNION
+
+SELECT name
+FROM country;
 ```
 
 ### Screenshot
@@ -146,7 +159,13 @@ Be sure to **sort by country name**.
 ### SQL
 
 ```sql
--- Your SQL here
+-- Your SQL here SELECT country.name AS name_of_country,
+       COUNT(countrylanguage.language) AS number_of_languages
+FROM country
+LEFT JOIN countrylanguage
+  ON country.code = countrylanguage.countrycode
+GROUP BY country.name
+ORDER BY country.name;
 ```
 
 ### Screenshot
@@ -165,7 +184,11 @@ Be sure to **sort by language name**.
 ### SQL
 
 ```sql
--- Your SQL here
+-- Your SQL here SELECT language,
+       COUNT(countrycode) AS number_of_countries
+FROM countrylanguage
+GROUP BY language
+ORDER BY language;
 ```
 
 ### Screenshot
@@ -185,7 +208,15 @@ _Hint: There are 8 such countries in this dataset._
 ### SQL
 
 ```sql
--- Your SQL here
+-- Your SQL here SELECT country.name AS name_of_country,
+       COUNT(countrylanguage.language) AS number_of_official_languages
+FROM country
+JOIN countrylanguage
+  ON country.code = countrylanguage.countrycode
+WHERE countrylanguage.isofficial = 'T'
+GROUP BY country.name
+HAVING COUNT(countrylanguage.language) > 2
+ORDER BY country.name;
 ```
 
 ### Screenshot
@@ -205,7 +236,9 @@ since some rows use that instead of actual data.
 ### SQL
 
 ```sql
--- Your SQL here
+-- Your SQL here SELECT *
+FROM city
+WHERE (district) LIKE '–';
 ```
 
 ### Screenshot
@@ -224,7 +257,12 @@ _Hint: The result should be approximately 0.4%._
 ### SQL
 
 ```sql
--- Your SQL here
+-- Your SQL here SELECT 
+  ROUND(
+    100.0 * COUNT(*) FILTER (WHERE TRIM(district) LIKE '–') / COUNT(*), 
+    1
+  ) AS percentage_missing_district
+FROM city;
 ```
 
 ### Screenshot
