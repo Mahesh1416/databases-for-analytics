@@ -56,11 +56,9 @@ JOIN countrylanguage
 
 ### Screenshot
 
-![Uploading Screenshot 2026-09-03 at 7.27.16 PM.png…]()
-
-
-
 ---
+
+<img width="1440" height="900" alt="Screenshot 2026-09-03 at 7 27 16 PM" src="https://github.com/user-attachments/assets/bdc84e92-2e48-4726-9454-f18b349f3725" />
 
 ## Question 3
 
