@@ -44,6 +44,7 @@ _Show evidence of how you determined this (for example, a COUNT query)._
 Using the World database, write the SQL command to
 **display each country name**
 along with the **name of each language spoken in that country**.
+![Uploading Screenshot 2026-09-03 at 7.27.16 PM.png…]()
 
 ### SQL
 
@@ -57,8 +58,6 @@ JOIN countrylanguage
 ### Screenshot
 
 ---
-
-<img width="1440" height="900" alt="Screenshot 2026-09-03 at 7 27 16 PM" src="https://github.com/user-attachments/assets/bdc84e92-2e48-4726-9454-f18b349f3725" />
 
 ## Question 3
 
