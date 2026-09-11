@@ -33,7 +33,7 @@ _25358._
 _Show evidence of how you determined this (for example, a count query)._
 
 ```javascript
-// Your MongoDB command here
+// 
 db.restaurants.countDocuments({})
 ```
 
