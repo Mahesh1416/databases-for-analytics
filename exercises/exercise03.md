@@ -1,6 +1,6 @@
 # Exercise 03: MongoDB – Document Queries and Analysis
 
-- Name:
+- Name: Mahesh Bashyal
 - Course: Database for Analytics
 - Module: 3
 - Database Used: MongoDB
@@ -34,6 +34,7 @@ _Show evidence of how you determined this (for example, a count query)._
 
 ```javascript
 // Your MongoDB command here
+db.restaurants.countDocuments({})
 ```
 
 <img width="1440" height="900" alt="Question 1" src="https://github.com/user-attachments/assets/01aa98a3-4ecd-4e10-a1e9-504d2777afd6" />
