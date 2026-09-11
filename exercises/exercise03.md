@@ -26,7 +26,7 @@ When importing the documents from `restaurants-json.json`,
 
 ### Answer
 
-_Write the number of documents imported._
+_25358._
 
 ### Screenshot
 
@@ -36,7 +36,8 @@ _Show evidence of how you determined this (for example, a count query)._
 // Your MongoDB command here
 ```
 
-![Q1 Screenshot](screenshots/q1_document_count.png)
+<img width="1440" height="900" alt="Question 1" src="https://github.com/user-attachments/assets/01aa98a3-4ecd-4e10-a1e9-504d2777afd6" />
+
 
 ---
 
@@ -54,7 +55,8 @@ Before writing queries on the data,
 
 ### Screenshot
 
-![Q2 Screenshot](screenshots/q2_use_database.png)
+<img width="1440" height="900" alt="Question 2" src="https://github.com/user-attachments/assets/de1cde57-39d0-44db-9c2d-93470699c7a7" />
+
 
 ---
 
@@ -72,7 +74,8 @@ write the MongoDB query needed to
 
 ### Screenshot
 
-![Q3 Screenshot](screenshots/q3_queens_restaurants.png)
+<img width="1440" height="900" alt="Question 3" src="https://github.com/user-attachments/assets/5bb0a4bc-644e-49de-85fe-e5a830a276d0" />
+
 
 ---
 
@@ -90,7 +93,8 @@ write the MongoDB query needed to
 
 ### Screenshot
 
-![Q4 Screenshot](screenshots/q4_queens_count.png)
+<img width="1440" height="900" alt="Question 4" src="https://github.com/user-attachments/assets/d26490fa-8778-4b4b-a2f5-092752e42cd8" />
+
 
 ---
 
@@ -109,7 +113,8 @@ write the MongoDB query needed to
 
 ### Screenshot
 
-![Q5 Screenshot](screenshots/q5_queens_hamburgers.png)
+<img width="1440" height="900" alt="Question 5" src="https://github.com/user-attachments/assets/122e12ff-c344-4676-9bbb-9c96f37c727c" />
+
 
 ---
 
@@ -129,7 +134,8 @@ _Hint: Look up how to query **embedded documents**._
 
 ### Screenshot
 
-![Q6 Screenshot](screenshots/q6_zipcode_count.png)
+<img width="1440" height="900" alt="Question 6" src="https://github.com/user-attachments/assets/4612acf0-7a79-4da1-9b4d-402e57dc69f4" />
+
 
 ---
 
@@ -160,7 +166,8 @@ Your output should resemble:
 
 ### Screenshot
 
-![Q7 Screenshot](screenshots/q7_zipcode_names.png)
+<img width="1440" height="900" alt="Question 7" src="https://github.com/user-attachments/assets/2068e052-0db8-43de-ab89-4bbafd8fca51" />
+
 
 ---
 
@@ -184,4 +191,5 @@ Your results should include:
 
 ### Screenshot
 
-![Q8 Screenshot](screenshots/q8_ihop_case_insensitive.png)
+<img width="1440" height="900" alt="Question 8" src="https://github.com/user-attachments/assets/aec50db4-bf3e-40ad-815f-052f6211fa22" />
+
