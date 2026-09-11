@@ -194,10 +194,11 @@ Your results should include:
 
 ```javascript
 
-db.restaurants.find({name:/IHOP/i}, {_id: 0, name: 1}).forEach(r => print (r.name))
+db.restaurants.find({name:/IHOP/i}, {_id: 0, name: 1})
 ```
 
 ### Screenshot
 
-<img width="1440" height="900" alt="Question 8" src="https://github.com/user-attachments/assets/aec50db4-bf3e-40ad-815f-052f6211fa22" />
+<img width="1440" height="900" alt="Screenshot 2026-09-11 at 5 49 02 PM" src="https://github.com/user-attachments/assets/18228d18-3e33-4fd0-b5e5-7d2d8b96cc27" />
+
 
