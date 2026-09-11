@@ -52,6 +52,7 @@ Before writing queries on the data,
 
 ```javascript
 // Your MongoDB command here
+use ("44661")
 ```
 
 ### Screenshot
@@ -71,6 +72,7 @@ write the MongoDB query needed to
 
 ```javascript
 // Your MongoDB query here
+db.restaurants.find({borough: "Queens"})
 ```
 
 ### Screenshot
@@ -90,6 +92,7 @@ write the MongoDB query needed to
 
 ```javascript
 // Your MongoDB query here
+db.restaurants.countDocuments({borough: "Queens"})
 ```
 
 ### Screenshot
@@ -110,6 +113,7 @@ write the MongoDB query needed to
 
 ```javascript
 // Your MongoDB query here
+db.restaurants.countDocuments({borough: "Queens", cuisine: "Hamburgers"})
 ```
 
 ### Screenshot
@@ -131,6 +135,7 @@ _Hint: Look up how to query **embedded documents**._
 
 ```javascript
 // Your MongoDB query here
+db.restaurants.countDocuments({"address.zipcode": "10460"})
 ```
 
 ### Screenshot
@@ -163,6 +168,7 @@ Your output should resemble:
 
 ```javascript
 // Your MongoDB query here
+db.restaurants.find({"address.zipcode": "10460"}, {_id: 0, name: 1})
 ```
 
 ### Screenshot
@@ -188,6 +194,7 @@ Your results should include:
 
 ```javascript
 // Your MongoDB query here
+db.restaurants.find({name:/IHOP/i}, {_id: 0, name: 1}).forEach(r => print(r.name))
 ```
 
 ### Screenshot
