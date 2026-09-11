@@ -194,7 +194,7 @@ Your results should include:
 
 ```javascript
 
-db.restaurants.find({name:/IHOP/i}, {_id: 0, name: 1}).forEach(r => print(r.name))
+db.restaurants.find({name:/IHOP/i}, {_id: 0, name: 1}).forEach(r => print (r.name))
 ```
 
 ### Screenshot
