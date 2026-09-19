@@ -35,11 +35,19 @@ along with the **number of official languages spoken**.
 
 ```sql
 -- Your SQL here
+SELECT c.Name, COUNT(*) AS NumLanguages
+FROM Country c
+JOIN CountryLanguage cl ON c.Code = cl.CountryCode
+WHERE cl.IsOfficial = 'T'
+GROUP BY c.Name
+HAVING COUNT(*) > 2
+ORDER BY NumLanguages DESC;
 ```
 
 ### Screenshot
 
-![Q1 Screenshot](screenshots/q1_official_language_counts.png)
+<img width="1440" height="900" alt="Question 1" src="https://github.com/user-attachments/assets/44449564-25cf-4241-b902-a94ca8b5e70e" />
+
 
 ---
 
