@@ -65,11 +65,39 @@ execute the query from Question 1 and
 
 ```python
 # Your three Python statements here
+# Import necessary libraries
+import pandas as pd
+from sqlalchemy import create_engine, text
+
+# Create the engine
+engine = create_engine("postgresql+psycopg2://maheshbashyal:Himacbook1@localhost:5432/world")
+
+# Define the SQL query
+query = """
+SELECT c.name, COUNT(*) AS numlanguages
+FROM country c
+JOIN countrylanguage cl ON c.code = cl.countrycode
+WHERE cl.isofficial = 'T'
+GROUP BY c.name
+HAVING COUNT(*) > 2
+ORDER BY numlanguages DESC;
+"""
+
+# 1. Connect
+connection = engine.connect()
+
+# 2. Execute
+result = connection.execute(text(query))
+
+# 3. Load into DataFrame and display
+df = pd.DataFrame(result.fetchall(), columns=result.keys())
+df
 ```
 
 ### Screenshot
 
-![Q2 Screenshot](screenshots/q2_jupyter_query_results.png)
+<img width="1440" height="900" alt="Screenshot 2026-09-19 at 4 56 41 PM" src="https://github.com/user-attachments/assets/804adf90-2b34-4158-9b51-3041584b339f" />
+
 
 ---
 
@@ -86,6 +114,15 @@ to produce the following graph:
 
 ```python
 # Your Python code here
+import matplotlib.pyplot as plt
+
+df.plot(x='name', y='numlanguages', kind='bar', legend=True, figsize=(4, 5))
+
+plt.xlabel('name')
+plt.ylabel('')
+plt.yticks([0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4])
+plt.tight_layout()
+plt.show()
 ```
 
 ### Screenshot
