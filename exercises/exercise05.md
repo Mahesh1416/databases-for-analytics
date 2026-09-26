@@ -147,7 +147,7 @@ After looking at the data, **why is this the case?**
 
 ### Answer
 
-_Write your explanation here._
+_Here we can notice that the opened times are probably in the local time zone while the sent date/time are in the default time zone. If you look carefully, we notice that the sent date/time have the same stamp but the opened dates/time are different_
 
 ### Screenshot (if requested by instructor)
 
