@@ -52,7 +52,8 @@ ORDER BY year;
 
 ### Screenshot
 
-![Q1 Screenshot](screenshots/q1_email_years.png)
+<img width="1440" height="900" alt="Question 1" src="https://github.com/user-attachments/assets/86f8b8cb-8aa9-4033-ab11-6b4c550b2c64" />
+
 
 ---
 
@@ -83,7 +84,7 @@ ORDER BY year;
 
 ### Screenshot
 
-![Q2 Screenshot](screenshots/q2_message_count_by_year.png)
+<img width="1440" height="900" alt="Question 2" src="https://github.com/user-attachments/assets/5c1b2685-097d-456d-a8ea-9efd9eb9fae7" />
 
 ---
 
@@ -112,7 +113,8 @@ WHERE sent_date IS NOT NULL
 
 ### Screenshot
 
-![Q3 Screenshot](screenshots/q3_sent_opened_interval.png)
+<img width="1440" height="900" alt="Question 3" src="https://github.com/user-attachments/assets/4bc95a3a-dddf-4db3-97d5-af1d14b285dd" />
+
 
 ---
 
@@ -133,7 +135,8 @@ WHERE opened_date < sent_date;
 
 ### Screenshot
 
-![Q4 Screenshot](screenshots/q4_opened_before_sent.png)
+<img width="1440" height="900" alt="Question 4" src="https://github.com/user-attachments/assets/368ef2a9-b149-4cae-a234-5d7b08e8db3e" />
+
 
 ---
 
@@ -215,7 +218,8 @@ ORDER BY dealership_id;
 
 ### Screenshot
 
-![Q7 Screenshot](screenshots/q7_salespeople_array_by_dealership.png)
+<img width="1440" height="900" alt="Question 7" src="https://github.com/user-attachments/assets/3c21d529-7a59-49be-a80a-c65fd2e7000e" />
+
 
 ---
 
@@ -251,7 +255,8 @@ ORDER BY d.dealership_id;
 
 ### Screenshot
 
-![Q8 Screenshot](screenshots/q8_salespeople_array_state_count.png)
+<img width="1440" height="900" alt="Question 8" src="https://github.com/user-attachments/assets/933c3b7b-03d0-44a4-a2f5-e7cbd7e71c00" />
+
 
 ---
 
@@ -272,7 +277,8 @@ FROM customers;
 
 ### Screenshot
 
-![Q9 Screenshot](screenshots/q9_customers_to_json.png)
+<img width="1440" height="900" alt="Question 9" src="https://github.com/user-attachments/assets/84882155-8b46-4070-ac33-8808d903f24b" />
+
 
 ---
 
@@ -312,4 +318,5 @@ FROM (
 
 ### Screenshot
 
-![Q10 Screenshot](screenshots/q10_salespeople_array_to_json.png)
+<img width="1440" height="900" alt="Question 10" src="https://github.com/user-attachments/assets/1f7419cf-3964-4477-b637-ebd422784be2" />
+
