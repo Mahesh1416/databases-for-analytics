@@ -241,6 +241,16 @@ Reference image:
 
 ```sql
 -- Your SQL here
+SELECT
+    d.dealership_id,
+    d.state,
+    COUNT(s.salesperson_id) AS number_of_salespeople,
+    ARRAY_AGG(s.last_name || ',' || s.first_name) AS salespeople
+FROM salespeople s
+JOIN dealerships d
+    ON s.dealership_id = d.dealership_id
+GROUP BY d.dealership_id, d.state
+ORDER BY d.dealership_id;
 ```
 
 ### Screenshot
