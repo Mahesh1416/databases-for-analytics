@@ -209,6 +209,12 @@ For example - dealership 1 is below:
 
 ```sql
 -- Your SQL here
+SELECT
+    dealership_id,
+    ARRAY_AGG(last_name || ',' || first_name) AS salespeople
+FROM salespeople
+GROUP BY dealership_id
+ORDER BY dealership_id;
 ```
 
 ### Screenshot
