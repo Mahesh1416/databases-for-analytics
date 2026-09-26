@@ -101,6 +101,13 @@ Only include emails that contain **both** a sent date and an opened date.
 
 ```sql
 -- Your SQL here
+SELECT
+    sent_date,
+    opened_date,
+    opened_date - sent_date AS interval
+FROM emails
+WHERE sent_date IS NOT NULL
+    AND opened_date IS NOT NULL;
 ```
 
 ### Screenshot
