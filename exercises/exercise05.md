@@ -188,7 +188,7 @@ CREATE TEMP TABLE customer_dealership_distance AS (
 
 ### Answer
 
-_Write your explanation here._
+_This code creates a pipeline to connect the customers to the nearest dealership. It creates three temporary tables which helps to do that. The first one builds a point for customer filtering out any missing coordinates. The second one does similar work for dealership. The third query cross joins every customer points with every dealership points and the distance between them._
 
 ---
 
