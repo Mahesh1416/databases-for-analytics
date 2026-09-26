@@ -43,7 +43,7 @@ year
 ### SQL
 
 ```sql
--- Your SQL here
+-- 
 SELECT DISTINCT
     EXTRACT(YEAR FROM sent_date) AS year
 FROM emails
@@ -72,7 +72,7 @@ count   year
 ### SQL
 
 ```sql
--- Your SQL here
+-- 
 SELECT
     COUNT(*) AS count,
     EXTRACT(YEAR FROM sent_date) AS year
@@ -100,7 +100,7 @@ Only include emails that contain **both** a sent date and an opened date.
 ### SQL
 
 ```sql
--- Your SQL here
+-- 
 SELECT
     sent_date,
     opened_date,
@@ -125,7 +125,7 @@ show emails that contain an **opened date BEFORE the sent date**.
 ### SQL
 
 ```sql
--- Your SQL here
+-- 
 SELECT email_id, opened_date, sent_date
 FROM emails
 WHERE opened_date < sent_date;
@@ -148,10 +148,6 @@ After looking at the data, **why is this the case?**
 ### Answer
 
 _Here we can notice that the opened times are probably in the local time zone while the sent date/time are in the default time zone. If you look carefully, we notice that the sent date/time have the same stamp but the opened dates/time are different_
-
-### Screenshot (if requested by instructor)
-
-![Q5 Screenshot](screenshots/q5_explain_date_issue.png)
 
 ---
 
@@ -208,7 +204,7 @@ For example - dealership 1 is below:
 ### SQL
 
 ```sql
--- Your SQL here
+-- 
 SELECT
     dealership_id,
     ARRAY_AGG(last_name || ',' || first_name) AS salespeople
@@ -240,7 +236,7 @@ Reference image:
 ### SQL
 
 ```sql
--- Your SQL here
+-- 
 SELECT
     d.dealership_id,
     d.state,
@@ -267,7 +263,7 @@ the **customers** table to **JSON**.
 ### SQL
 
 ```sql
--- Your SQL here
+-- 
 SELECT 
 row_to_json(customers)
 FROM customers;
@@ -298,7 +294,20 @@ Reference image:
 ### SQL
 
 ```sql
--- Your SQL here
+-- 
+SELECT row_to_json(dealership_summary)
+FROM (
+    SELECT
+        d.dealership_id,
+        d.state,
+        COUNT(s.salesperson_id) AS number_of_salespeople,
+        ARRAY_AGG(s.last_name || ',' || s.first_name) AS salespeople
+    FROM salespeople s
+    JOIN dealerships d
+        ON s.dealership_id = d.dealership_id
+    GROUP BY d.dealership_id, d.state
+    ORDER BY d.state
+) AS dealership_summary;
 ```
 
 ### Screenshot
