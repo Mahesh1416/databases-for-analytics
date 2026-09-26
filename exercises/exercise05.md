@@ -255,7 +255,8 @@ ORDER BY d.state;
 
 ### Screenshot
 
-<img width="1440" height="900" alt="Question 8" src="https://github.com/user-attachments/assets/933c3b7b-03d0-44a4-a2f5-e7cbd7e71c00" />
+<img width="1440" height="900" alt="Question 8" src="https://github.com/user-attachments/assets/e99f51cf-1e93-4b09-8019-24246dede6c4" />
+
 
 
 ---
