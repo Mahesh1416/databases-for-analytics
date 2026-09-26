@@ -126,6 +126,9 @@ show emails that contain an **opened date BEFORE the sent date**.
 
 ```sql
 -- Your SQL here
+SELECT email_id, opened_date, sent_date
+FROM emails
+WHERE opened_date < sent_date;
 ```
 
 ### Screenshot
