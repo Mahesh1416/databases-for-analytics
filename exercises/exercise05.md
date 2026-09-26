@@ -250,7 +250,7 @@ FROM salespeople s
 JOIN dealerships d
     ON s.dealership_id = d.dealership_id
 GROUP BY d.dealership_id, d.state
-ORDER BY d.dealership_id;
+ORDER BY d.state;
 ```
 
 ### Screenshot
