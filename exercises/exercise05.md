@@ -268,6 +268,10 @@ the **customers** table to **JSON**.
 
 ```sql
 -- Your SQL here
+SELECT 
+row_to_json(customers)
+FROM customers;
+
 ```
 
 ### Screenshot
