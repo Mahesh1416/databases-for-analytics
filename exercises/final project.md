@@ -56,12 +56,6 @@ JOIN (
 ORDER BY t.table_name;
 ```
 
-Why the row counts differ even though it is one dataset:
-
-- `customers` and `orders` are both 99,441 because Olist creates a new `customer_id` for every order, so the two tables are one-to-one.
-- `order_items` is larger (112,650) because one order can contain several items.
-- `products` is smaller (32,951) because it is a catalog that lists each product once.
-
 *<img width="1440" height="900" alt="table structure with datatypes" src="https://github.com/user-attachments/assets/122c2dcd-a19b-461b-9d3e-736f85e3a57e" />
 
 
