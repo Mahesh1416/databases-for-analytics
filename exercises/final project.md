@@ -198,8 +198,7 @@ FROM information_schema.columns
 WHERE table_schema = 'public'
 ORDER BY table_name, ordinal_position;
 ```
-
-*<img width="1440" height="900" alt="select number of rows from each table" src="https://github.com/user-attachments/assets/c06908a8-199f-409c-99e9-c2341abf3538" />
+* <img width="1440" height="900" alt="table structure with datatypes" src="https://github.com/user-attachments/assets/c8c10a01-451a-4916-892f-838c7cc5a1a9" />
 
 *
 
