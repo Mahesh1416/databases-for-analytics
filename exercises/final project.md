@@ -1,4 +1,4 @@
-<img width="1440" height="900" alt="select number of rows from each table" src="https://github.com/user-attachments/assets/ebf2d1a7-221b-44dc-9420-57c4bb1c36a1" /># Final project using Olist E-Commerce Dataset: PostgreSQL Analysis
+# Final project using Olist E-Commerce Dataset: PostgreSQL Analysis
 
 Database: `olist` (PostgreSQL, managed in pgAdmin 4)
 Tables: `customers`, `products`, `orders`, `order_items`
