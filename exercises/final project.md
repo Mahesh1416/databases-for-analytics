@@ -328,7 +328,4 @@ LIMIT 10;
 
 ```
 
-This shows why `customer_unique_id` is needed to count actual people, since `customer_id` is created per order.
-
-*
 *
