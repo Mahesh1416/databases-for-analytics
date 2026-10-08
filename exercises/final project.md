@@ -97,7 +97,7 @@ The project meets the following requirements:
 ## 4. Database Setup and Table Creation
 I created a postgresQL database named olist using pgAdmin 4
 ## 4.1 customers table
-
+```sql
 CREATE TABLE customers (
     customer_id               VARCHAR(32) PRIMARY KEY,
     customer_unique_id        VARCHAR(32) NOT NULL,
@@ -105,9 +105,10 @@ CREATE TABLE customers (
     customer_city             VARCHAR(100),
     customer_state            CHAR(2)
 );
-
+```
 
 ## 4.2 products table
+```sql
 CREATE TABLE products (
     product_id                  VARCHAR(32) PRIMARY KEY,
     product_category_name       VARCHAR(100),
@@ -120,7 +121,9 @@ CREATE TABLE products (
     product_width_cm            INTEGER
 
 );
+```
 ## 4.3 orders table
+```sql
 CREATE TABLE orders (
     order_id                       VARCHAR(32) PRIMARY KEY,
     customer_id                    VARCHAR(32) REFERENCES customers(customer_id),
@@ -131,8 +134,10 @@ CREATE TABLE orders (
     order_delivered_customer_date  TIMESTAMP,
     order_estimated_delivery_date  TIMESTAMP
 );
+```
 
 ## 4.4 order_items table
+```sql
 CREATE TABLE order_items (
     order_id       VARCHAR(32) REFERENCES orders(order_id),
     order_item_id  INTEGER,
@@ -142,7 +147,7 @@ CREATE TABLE order_items (
     freight_value  NUMERIC(10,2),
     PRIMARY KEY (order_id, order_item_id)
 );
-
+```
 ## 4. Importing the olist datasets
 All four tables were loaded in the PSQL Tool (right-click the database, PSQL Tool), in this order because of the foreign keys:
 
