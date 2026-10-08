@@ -153,7 +153,7 @@ All four tables were loaded in the PSQL Tool (right-click the database, PSQL Too
 \copy public.order_items FROM '/Users/maheshbashyal/Desktop/olist_order_items_dataset.csv' WITH (FORMAT csv, HEADER)
 
 ## 5. Verifying the Imported Data
-### Row counts
+### 5.1  Row counts
 
 ```sql
 SELECT 'customers' AS table_name, COUNT(*) AS row_count FROM customers
@@ -161,57 +161,11 @@ UNION ALL SELECT 'products', COUNT(*) FROM products
 UNION ALL SELECT 'orders', COUNT(*) FROM orders
 UNION ALL SELECT 'order_items', COUNT(*) FROM order_items;
 ```
-
-### Column counts
-
-```sql
-SELECT table_name, COUNT(*) AS column_count
-FROM information_schema.columns
-WHERE table_schema = 'public'
-GROUP BY table_name
-ORDER BY table_name;
-```
-
-### Rows and columns together
-
-```sql
-SELECT t.table_name,
-       c.column_count,
-       t.row_count
-FROM (
-    SELECT 'customers' AS table_name, COUNT(*) AS row_count FROM customers
-    UNION ALL SELECT 'products', COUNT(*) FROM products
-    UNION ALL SELECT 'orders', COUNT(*) FROM orders
-    UNION ALL SELECT 'order_items', COUNT(*) FROM order_items
-) t
-JOIN (
-    SELECT table_name, COUNT(*) AS column_count
-    FROM information_schema.columns
-    WHERE table_schema = 'public'
-    GROUP BY table_name
-) c ON c.table_name = t.table_name
-ORDER BY t.table_name;
-```
-
-*<img width="1440" height="900" alt="table structure with datatypes" src="https://github.com/user-attachments/assets/122c2dcd-a19b-461b-9d3e-736f85e3a57e" />
-
-
-
-### Show structure and data types
-
-```sql
-SELECT table_name, column_name, data_type, character_maximum_length, is_nullable
-FROM information_schema.columns
-WHERE table_schema = 'public'
-ORDER BY table_name, ordinal_position;
-```
-* <img width="1440" height="900" alt="table structure with datatypes" src="https://github.com/user-attachments/assets/c8c10a01-451a-4916-892f-838c7cc5a1a9" />
-
-*
+<img width="1440" height="900" alt="Screenshot 2026-10-07 at 8 24 23 PM" src="https://github.com/user-attachments/assets/662f2ce4-1633-4895-a3bd-434cdb18e0e0" />
 
 ---
 
-## 6.1 SELECT * From Each Table
+### 5.2 SELECT * From Each Table
 
 ```sql
 SELECT * FROM customers   LIMIT 20;
@@ -244,9 +198,9 @@ SELECT * FROM order_items LIMIT 20;
 
 ---
 
-## 7. Interesting Queries
+## 6. Interesting Queries
 
-### 7.1 Join and group by: orders by customer state
+### 6.1 Join and group by: orders by customer state
 
 ```sql
 SELECT c.customer_state,
@@ -263,7 +217,7 @@ ORDER BY total_orders DESC;
 
 *
 
-### 7.2 Join and aggregate: revenue by product category
+### 6.2 Join and aggregate: revenue by product category
 
 ```sql
 SELECT p.product_category_name,
@@ -281,7 +235,7 @@ LIMIT 10;
 
 *
 
-### 7.3 Multi-table join: revenue by category and state
+### 6.3 Multi-table join: revenue by category and state
 
 ```sql
 SELECT p.product_category_name,
@@ -303,7 +257,7 @@ LIMIT 15;
 
 *
 
-### 7.4 Group by: order status breakdown
+### 6.4 Group by: order status breakdown
 
 ```sql
 SELECT order_status, COUNT(*) AS order_count
@@ -317,7 +271,7 @@ ORDER BY order_count DESC;
 
 *
 
-### 7.5 Top 10 cities by customer records
+### 6.5 Top 10 cities by customer records
 
 ```sql
 SELECT customer_city, customer_state, COUNT(*) AS customer_count
@@ -329,17 +283,24 @@ LIMIT 10;
 
 *<img width="1440" height="900" alt="top 10 cities by customer records" src="https://github.com/user-attachments/assets/3607ba8d-aaf3-4af3-828f-f145056462da" />
 
-## 7. Obstacles Overcome
+## 7. Overcoming obstacles and challenges
 
 1. **Column mismatch in order_items.** My first table definition included a `shipping_limit_date` column that does not exist in the CSV. The import failed with `invalid input syntax for type timestamp: "58.90"` because the price was being read into the date column. I inspected the file with `head -n 3`, saw the real header, and rebuilt the table to match.
-2. **Failed imports in the pgAdmin dialog.** The dialog's NULL setting treated only the literal word `NULL` as a missing value, but the files use empty fields. I switched to `\copy` in the PSQL Tool, which loads empty fields as NULL by default.
+2. **Failed imports in the pgAdmin dialog.** There some issues while loading imports in pgAdmin. While loading the data there were empty fields which were not labelled null. The import dialog's NULL settings only recognized the literal word 'NULL' as a missing value. This caused the load to fail. I found that I could fix it by switching to \copy in the PSQL Tool, which treats empty fields as NULL by default, and loaded the data correctly.
 3. **Load order and foreign keys.** `orders` depends on `customers`, and `order_items` depends on `orders` and `products`, so the tables had to be loaded in the order customers, products, orders, order_items.
-4. **Two ID columns in customers.** `customer_id` is unique per order, not per person. To count actual people, I use `COUNT(DISTINCT customer_unique_id)`.
-5. **Zip codes.** Stored as `VARCHAR(5)` instead of an integer so leading zeros are preserved.
-6. **Finding the real error.** The pgAdmin failure banner does not show the cause. The reason is in **Tools → Processes → View details**, at the bottom of the log.
-7. **Inconsistent quoting in the CSVs.** Some values are quoted and some are not, which the CSV parser handles correctly.
+4. **Finding the real error.** The pgAdmin failure banner does not show the cause. The reason is in **Tools → Processes → View details**, at the bottom of the log.
+5. **Inconsistent quoting in the CSVs.** Some values are quoted and some are not, which the CSV parser handles correctly.
 
 ---
+
+## 8. My learning experience
+This project has trained me how to locate the data and load it to pgAdmin 4 using posgreSQL.  I also learned that there are many things that could go wrong. Simple but important concepts like order of loading the tables can be important. 
+
+## 9. Results
+I was able to create a PostgreSQL database named olist and imported four tables containing various information like customers, products, orders and order_items.
+
+## 10. Final Reflection
+This project has provided me the training and experience workin with a large dataset from public repositories. I learned how to import the dataset, verify them and then run the queries necessary to analyze the data.
 
 
 
